@@ -12,7 +12,7 @@ func (n *Node) newNode(r rune) *Node {
 	n.child[r] = &Node{
 		parent: n,
 		child:  make(map[rune]*Node),
-		value:  nil,
+		value: nil,
 		end:    0,
 		cnt:    0,
 	}
