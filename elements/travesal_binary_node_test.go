@@ -15,6 +15,10 @@ type TmpNode struct {
 	right IBinaryTreeNode
 }
 
+func (t *TmpNode) Parent() IBinaryTreeNode {
+	return nil
+}
+
 func (t *TmpNode) Key() interface{} {
 	return t.key
 }

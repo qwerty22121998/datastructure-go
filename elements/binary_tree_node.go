@@ -5,6 +5,7 @@ type IBinaryTreeNode interface {
 	Value() interface{}
 	Left() IBinaryTreeNode
 	Right() IBinaryTreeNode
+	Parent() IBinaryTreeNode
 	Visit()
 }
 
