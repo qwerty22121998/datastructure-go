@@ -5,7 +5,7 @@ type INode interface {
 	Value() interface{}
 	Left() INode
 	Right() INode
-	Print()
+	Visit()
 }
 
 func InOrder(node INode) {
@@ -13,7 +13,7 @@ func InOrder(node INode) {
 		return
 	}
 	InOrder(node.Left())
-	node.Print()
+	node.Visit()
 	InOrder(node.Right())
 }
 
@@ -21,7 +21,7 @@ func PreOrder(node INode) {
 	if node == nil {
 		return
 	}
-	node.Print()
+	node.Visit()
 	PreOrder(node.Left())
 	PreOrder(node.Right())
 }
@@ -32,5 +32,5 @@ func PosOrder(node INode) {
 	}
 	PosOrder(node.Left())
 	PosOrder(node.Right())
-	node.Print()
+	node.Visit()
 }

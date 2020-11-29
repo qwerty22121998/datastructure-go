@@ -31,7 +31,7 @@ func (t *TmpNode) Right() INode {
 	return t.right
 }
 
-func (t *TmpNode) Print() {
+func (t *TmpNode) Visit() {
 	log.Print(t.value)
 }
 
