@@ -11,8 +11,8 @@ import (
 type TmpNode struct {
 	key   int
 	value int
-	left  INode
-	right INode
+	left  IBinaryTreeNode
+	right IBinaryTreeNode
 }
 
 func (t *TmpNode) Key() interface{} {
@@ -23,11 +23,11 @@ func (t *TmpNode) Value() interface{} {
 	return t.value
 }
 
-func (t *TmpNode) Left() INode {
+func (t *TmpNode) Left() IBinaryTreeNode {
 	return t.left
 }
 
-func (t *TmpNode) Right() INode {
+func (t *TmpNode) Right() IBinaryTreeNode {
 	return t.right
 }
 
@@ -69,19 +69,19 @@ func TestInOrder(t *testing.T) {
 	expected := "4\n2\n5\n1\n3\n"
 	assert.Equal(t, captureOutput(func() {
 		InOrder(root)
-	}),expected)
+	}), expected)
 }
 
 func TestPreOrder(t *testing.T) {
 	expected := "1\n2\n4\n5\n3\n"
 	assert.Equal(t, captureOutput(func() {
 		PreOrder(root)
-	}),expected)
+	}), expected)
 }
 
 func TestPosOrder(t *testing.T) {
 	expected := "4\n5\n2\n3\n1\n"
 	assert.Equal(t, captureOutput(func() {
 		PosOrder(root)
-	}),expected)
+	}), expected)
 }

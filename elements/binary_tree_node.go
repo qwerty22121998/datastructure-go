@@ -1,14 +1,14 @@
 package elements
 
-type INode interface {
+type IBinaryTreeNode interface {
 	Key() interface{}
 	Value() interface{}
-	Left() INode
-	Right() INode
+	Left() IBinaryTreeNode
+	Right() IBinaryTreeNode
 	Visit()
 }
 
-func InOrder(node INode) {
+func InOrder(node IBinaryTreeNode) {
 	if node == nil {
 		return
 	}
@@ -17,7 +17,7 @@ func InOrder(node INode) {
 	InOrder(node.Right())
 }
 
-func PreOrder(node INode) {
+func PreOrder(node IBinaryTreeNode) {
 	if node == nil {
 		return
 	}
@@ -26,7 +26,7 @@ func PreOrder(node INode) {
 	PreOrder(node.Right())
 }
 
-func PosOrder(node INode) {
+func PosOrder(node IBinaryTreeNode) {
 	if node == nil {
 		return
 	}
