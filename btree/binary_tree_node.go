@@ -1,4 +1,4 @@
-package elements
+package btree
 
 type IBinaryTreeNode interface {
 	Key() interface{}
@@ -6,6 +6,9 @@ type IBinaryTreeNode interface {
 	Left() IBinaryTreeNode
 	Right() IBinaryTreeNode
 	Parent() IBinaryTreeNode
+	SetLeft(node IBinaryTreeNode)
+	SetRight(node IBinaryTreeNode)
+	SetParent(node IBinaryTreeNode)
 	Visit()
 }
 
